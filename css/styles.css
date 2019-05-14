@@ -67,11 +67,10 @@ p {
 /* main styles */
 #introduction {
   background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3) ), url('../img/starry_night_bg_1.jpg');
-  /*background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3) ), url('../img/data.jpg');*/
 }
 
 #conclusion {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6) ), url('../img/data2.jpg');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6) ), url('../img/starry_night_bg_1.jp');
 }
 
 #call-to-action {

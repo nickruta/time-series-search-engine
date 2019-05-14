@@ -35,7 +35,7 @@ var myFullpage = new fullpage('#fullpage', {
 });
 
 var options = {
-  strings: ['Time series search engine', 'Kernelized cross-correlation distance metric.', 'Feature-based similarity.', 'Query by example.', 'One-to-one comparisons.', 'One-to-many comparisons.'],
+  strings: ['Time series search engine.', 'Kernelized cross-correlation distance metric.', 'Feature-based similarity.', 'Query by example.', 'One-to-one comparisons.', 'One-to-many comparisons.'],
   typeSpeed: 75,
   startDelay: 1000,
   backDelay: 1000,
