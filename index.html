@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Time Series Analysis</title>
+
+    <!-- bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+    <!-- css for scrolling nav bar -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- css for scroll nav dots -->
+    <link href="css/scrollDots.css" rel="stylesheet">
+
+    <!-- custom css -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- css for squaire template -->
+    <link rel="stylesheet" href="css/squaire.css">
+
+  </head>
+
+  <body id="page-top">
+    <!-- scrolling nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" data-menuanchor="home" href="#home">Time Series Search Engine</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" data-menuanchor="section3" href="#section3">The Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" data-menuanchor="section4" href="#section4">Distance Metrics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" data-menuanchor="section5" href="#section5">Search Options</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" data-menuanchor="section6" href="#section6">Query by Example</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" data-menuanchor="section7" href="#section7">Visual Analytics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" data-menuanchor="section8" href="#section8">Future Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" data-menuanchor="section9" href="#section9">References</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- page header -->
+    <div id="fullpage">
+      <div id="introduction" class="section bg-primary text-white">
+        <div class="container text-center">
+          <h1 id="page-main-title">Visual Analytics for Astronomy Time Series Analysis</h1>
+          <p class="lead">Nick Ruta</p>
+          <br>
+          <br>
+          <h3 class="typedHeader"></h3>
+        </div>
+      </div>
+
+      <div id="motivation" class="section">
+        <div class="container text-center">
+          <h1 data-aos="fade-in">Why does this matter?</h1>
+          <p class="lead">We all know data gets passed around somehow. By some people. In some way. Surprisingly, though, breaches in health data are much more common than we might think, and the extent of impact is shockingly broad.</p>
+
+          <!-- font awesome icons -->
+          <!-- circle background adapted from https://blackrockdigital.github.io/startbootstrap-agency/ -->
+          <div class="row icons-container">
+            <div class="col-md-4 icon-container">
+              <div class="text-center">
+                <span class="fa-stack fa-3x">
+                  <i class="fa fa-circle fa-stack-2x icon-circle"></i>
+                  <i class="fa fa-exclamation-circle fa-stack-1x fa-inverse"></i>
+                </span>
+                <h1 class="small-title">Happens way too often</h1>
+                <p class="caption text-margin-bottom">A large breach in health data in America occurs on average more than once per day.</p>
+                <a class="button-link" href="https://www.healthcare-informatics.com/news-item/cybersecurity/2017-breach-report-477-breaches-56m-patient-records-affected" target="_blank" class="btn btn-primary" target="_blank">US Department of HHS&ensp;<i class="fa fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4 icon-container">
+              <div class="text-center">
+                <span class="fa-stack fa-3x">
+                  <i class="fa fa-circle fa-stack-2x icon-circle"></i>
+                  <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+                </span>
+                <h1 class="small-title">Affects all of us</h1>
+                <p class="caption text-margin-bottom">More than 8.9 billion health records have been breached in the past 14 years alone.</p>
+                <a class="button-link" href="https://thedatamap.org/contests/data/prcbreaches2005-18.csv" target="_blank">Download the Data&ensp;<i class="fa fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4 icon-container">
+              <div class="text-center">
+                <span class="fa-stack fa-3x">
+                  <i class="fa fa-circle fa-stack-2x icon-circle"></i>
+                  <i class="fa fa-times fa-stack-1x fa-inverse"></i>
+                </span>
+                <h1 class="small-title">Often easily avoidable</h1>
+                <p class="caption text-margin-bottom">The US Secret Service estimates that 96% of breaches are avoidable through simple or intermidate controls.</p>
+                <a class="button-link" href="http://www.verizonenterprise.com/resouces/executivesummary/es_2011-data-breach-investigations-report_en_xg.pdf" target="_blank">Data Breach Investigations Report&ensp;<i class="fa fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <p class="lead">Maybe a story will bring light to the gravity of this issue...</p>
+        </div>
+      </div>
+
+      <div id="story1" class="section bg-primary text-white">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="img/nathan.png">
+            </div>
+            <div class="col-md-6 vertical-center">
+              <div>
+                <h1>Meet Nathan.</h1>
+                <p class="lead">Nathan is a middle-aged man living in the United States. He has worked since graduating college and likes to dabble in pottery and d3.js blogs in his free time. Nathan recently found it he has liver cancer and has been going to the hospital frequently for treatment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- first visualization -->
+      <div id="vis-1" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 vertical-center text-center">
+              <div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" src="img/your_network_slider_1.png" alt="First slide">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Network Connection View</h5>
+                        <p>There are 39 connections between You, the Patient, and other categories of companies.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="img/your_network_slider_2.png" alt="Second slide">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Companies Breached View</h5>
+                        <p>94% of the 693 companies in the Payer (Insurer) category have been breached.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="vis-1-info" class="col-md-6 vertical-center">
+              <div>
+                <h1>Your data travels. A lot.</h1>
+                <p class="lead text-margin-bottom">Little does Nathan know, when he goes to the hospital or doctor's office the information collected about his health and personal identity is distributed very widely. Dozens of entities are involved in a complex web of interactions among insurance companies, physicians, and beyond. The additional connection to any node in this network expands the vulnerability of Nathan's sensitive health data...</p>
+                <a class="btn btn-primary js-scroll-trigger" data-menuanchor="section8" href="#section8">Explore the Data</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="story2" class="section bg-primary text-white">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="img/envelope.png">
+            </div>
+            <div class="col-md-6 vertical-center">
+              <div>
+                <h1>An unlikely threat.</h1>
+                <p class="lead">One day, Nathan receives a letter from his health insurance company, Anthem, asking about his plan coverage with a "priority code" on the outside of the envelope. While seemingly harmless, the "code" is made up of Nathan's social security number plus two additional digits. This leaves Nathan's sensitive information associated with his Social Security number exposed to anyone aware of Anthem's mistake.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- second visualization -->
+      <div id="vis-2" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 vertical-center text-center" id="map-dashboard">
+              <div>
+                <div class="row">
+                  <div class="col-md-4 text-left">
+                    <h2 id="vis2-header">Breaches Reported Across the US</h2>
+                    <!-- Bootstrap dropdown -->
+                    <div class="dropdown-container2">
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          All Categories
+                        </button>
+                        <div class="scrollable-dropdown dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdown-menu2">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="instructions-container small-title">
+                      <h2 class="howto">How to Use</h2>
+                        <p class="caption"><span class='action-word'>Hover</span> over boxes to see state-specific data. <span class='action-word'>Click</span> and <span class='action-word'>drag</span> your cursor over the timeline below to explore the distributions of breaches from 2005 to 2018. <span class='action-word'>Filter</span> by company category using the dropdown above.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-7 vertical-center" id = "map-size">
+                    <div id="map-container"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div id="timeline"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 vertical-center">
+              <div>
+                <h1>This is reality.</h1>
+                <p class="lead">While Nathan's misfortune seems like an odd story, this breach actually happened in April 2011. More than <b>78 million</b> individuals were affected. Thousands of breaches just like this one occur throughout the United States. <br><br> Fortunately legislation is being passed at a state level that forces companies to disclose these breaches to the public. California has the strictest laws, but today all 50 states have passed legislation forcing companies to report breaches in their data causing more and more of these breaches to be exposed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="story4" class="section bg-primary text-white">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="img/money.png">
+            </div>
+            <div class="col-md-6 vertical-center">
+              <div>
+                <h1>A purchase.</h1>
+                <p class="lead">While Nathan attempts to remedy his situation, his personal information is collected by South Carolina (the state he resides in). South Carolina in turn can sell this data to interested buyers, including WebMD Health, Truven Health Analytics, and Milliman, for over $53,000.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- fourth visualization -->
+      <div id="vis-4" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 vertical-center text-center">
+              <div>
+                <!-- Bootstrap dropdown -->
+                <div class="dropdown-container">
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      States with Most Expensive Discharge Data
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdown-menu4">
+                      <a class="dropdown-item" href="#" data-key="ascending">States with Most Expensive Discharge Data</a>
+                      <a class="dropdown-item" href="#" data-key="descending">States with Least Expensive Discharge Data</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <!-- legend -->
+                    <div class="instructions-container small-title">
+                      <h2 class="howto">How to Use</h2>
+                        <p class="caption"><span class='action-word'>Hover</span> over bars to see the discharge price for each state.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div id="vis-4-area"></div>
+                  </div>
+                </div>
+                <p><b>Figure 4:</b> The discharge price for health data for states in the United States.</p>
+              </div>
+            </div>
+
+            <div class="col-md-5 vertical-center">
+              <div>
+                <h1>States are not helping. They're making money.</h1>
+                <p class="lead">This story is common among many states, as 47 states sell discharge data for a price (ranging from $25 to over $93,000). In terms of the distribution of discharge prices, Colorado ($93,303) and South Carolina ($53,188) have much higher discharge prices than the next closest state, Tennessee ($10,000).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="story3" class="section bg-primary text-white">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="img/smartphone.png">
+            </div>
+            <div class="col-md-6 vertical-center">
+              <div>
+                <h1>An attack on the homefront.</h1>
+                <p class="lead">As Nathan worries about the dispersal of his private information on his cancer treatments, he moves to using his personal smartphone instead to keep track of medicine, procedures, and his daily fitness routines. From Apple Health on his iPhone to Fitbit on his wrist, Nathan feels secure that his health data is kept close to him (literally). Little does he know...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- third visualization -->
+      <div id="vis-3" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 vertical-center text-center">
+              <div>
+                <!-- Bootstrap dropdown -->
+                <div class="dropdown-container">
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Total Domains
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdown-menu">
+                      <a class="dropdown-item" href="#" data-key="connections">Total Domains</a>
+                      <a class="dropdown-item" href="#" data-key="thirdPartyConnections">Third Party Domains</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <!-- legend -->
+                    <div id="vis-3-legend-container" class="text-left"></div>
+                    <div class="instructions-container small-title">
+                      <h2 class="howto">How to Use</h2>
+                        <p class="caption"><span class='action-word'>Hover</span> over nodes to see app-specific data. <span class='action-word'>Hover</span> over legend labels to see more information about categories. <span class='action-word'>Click</span> and <span class='action-word'>drag</span> nodes to move them around. <span class='action-word'>Filter</span> by type of domain using the dropdown above.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div id="vis-3-area"></div>
+                  </div>
+                  <div id="vis-3-average-container">
+                    <h1 class="average-title" id="units-title"></h1>
+                  </div>
+                </div>
+                <p><b>Figure 3:</b> The number of distinct domains each app shares data with in one session.</p>
+              </div>
+            </div>
+
+            <div class="col-md-5 vertical-center">
+              <div>
+                <h1>It's so close. But travels so far.</h1>
+                <p class="lead">We use our phones every day. Surprisingly, these apps that contain our daily fitness tracking and health records share data with many different domains (often times third-party ones) that are vulnerable to security risks. Relative to other app categories including business (6.5), photo/video (8.6), and navigation (9) apps, health (9.25) and medical (10.3) apps have a higher average number of distinct domains that receive data per app session. Those with sensitive health/personal data, including lifestyle (8) and social (10.45), also share with a relatively high number of domains.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="conclusion" class="section bg-primary text-white">
+        <div class="container text-center">
+          <h1>Don't end up like Nathan.</h1>
+          <p class="lead">The data on health care privacy is much more shocking than we might think. Sensitive health data is spread through a complex network involving insurance companies, educational institutions, physicians, and more. As a result of this broad network, breaches are happening at an astonishing rate, increasing over time and across the United States. The individual stories of how these breaches are simultaneously unbelievable and strongly representative of the truth. Nathan's story is similar to 652 others in the same category of company. The problem is rooted so deeply it even extends to within reach of us (literally) through our smartphones, with health and medical apps relying on hundreds of online connections to transmit data.</p>
+          <p id="call-to-action">
+            <h2>What can you do about it?</h2>
+            <div id="action-container" class="row">
+                <div class="col-sm-12">
+                  <p><a href="https://www.healthit.gov/form/healthit-feedback-form" target="_blank">healthIT.gov</a> can help you file a complaint if you believe your health information privacy has been violated. You can <a href="https://www.hipaajournal.com/category/healthcare-data-privacy/" target="_blank">keep up to date on healthcare data privacy issues.</a> Also, you can update privacy settings on apps provided by companies such as <a href="https://www.facebook.com/help/325807937506242" target="_blank">Facebook</a> and <a href="https://policies.google.com/privacy?hl=en" target="_blank">Google</a>.</p>
+              </div>
+            </div>
+          </p>
+        </div>
+      </div>
+
+      <div id="explore-1" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="vertical-center text-center">
+              <div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-3">
+                        <div id="vis-1-annotation-category" class="caption"></div>
+                        <div id="vis-1-annotation-company" class="caption"></div>
+                        <div class="instructions-container small-title">
+                          <h2 class="howto">How to Use</h2>
+                            <p class="caption"><span class='action-word'>Hover</span> over a category node <svg class="instructions-node" height="15px" viewBox="-1 -2 34 34" xmlns="http://www.w3.org/2000/svg"><circle fill="#FEE5D9" stroke="black" stroke-width="1" cx="16" cy="16" r="16"/></svg> to see where it shares data to. <span class='action-word'><br><br>Click</span> a category node <svg class="instructions-node" height="15px" viewBox="0 -2 34 34" xmlns="http://www.w3.org/2000/svg"><circle fill="#FEE5D9" stroke="black" stroke-width="1" cx="16" cy="16" r="16"/></svg> to see that category's companies details.</p>
+
+                            <p class="caption"><span class='action-word'>Hover</span> over any company <svg class="instructions-node" height="20px" viewBox="-1 -2 34 34" xmlns="http://www.w3.org/2000/svg"><circle fill="rgb(49, 130, 189)" stroke="rgb(49, 130, 189)" stroke-width="1" cx="16" cy="16" r="16"/></svg> to see details. <span class='action-word'><br>Click</span> any company <svg class="instructions-node" height="20px" viewBox="-1 -2 34 34" xmlns="http://www.w3.org/2000/svg"><circle fill="rgb(49, 130, 189)" stroke="rgb(49, 130, 189)" stroke-width="1" cx="16" cy="16" r="16"/></svg> to show the categories network again.</p>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                      <div id="vis-1-group">
+                        <button id="reset-vis-1" type="button" class="btn btn-sm btn-warning">Hide Companies Cluster</button>
+                        <svg id="vis-1-container"></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <a id="vis1-return-button" class="btn btn-primary js-scroll-trigger" data-menuanchor="section3" href="#section3">Return to Story</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="references" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1 class="footer-title">Project Info</h1>
+              <h3>Author</h3>
+              <ul>
+                <li id='author-list'>Nick Ruta</li>
+              </ul>
+              <div id='screencast-container' class="row">
+<!--                 <h3 id='screencast-title'>Watch Our Screencast</h3>
+                <iframe width="350" height="200" src="https://www.youtube.com/embed/AwXnXk_7ynE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              </div>
+              <h3 id='inspiration-title'>Inspiration & Research</h3>
+              <p><sup>1</sup> <a href="http://www.verizonenterprise.com/resouces/executivesummary/es_2011-data-breach-investigations-report_en_xg.pdf" target="_blank">2011 data breach report</a></p>
+              <p><sup>2</sup> <a href="https://www.healthcare-informatics.com/news-item/cybersecurity/2017-breach-report-477-breaches-56m-patient-records-affected" target="_blank">2017 Breach Report</a></p>
+              <p><sup>3</sup> <a href="https://catalog.data.gov/dataset/state-health-it-privacy-and-consent-laws-and-policies/resource/9a530821-7a72-48eb-b9ca-26738fab9329" target="_blank">Data.Gov: State Health IT Privacy and Consent Laws and Policies</a></p>
+            </div>
+            <div class="col-md-6">
+              <h1 class="footer-title">References</h1>
+              <h3>Data Sources</h3>
+              <p><sup>1</sup> <a href="https://thedatamap.org/contests/data/orgsindex.csv" target="_blank">List of organizations and entities involved in data sharing transaction(s)</a></p>
+              <p><sup>2</sup> <a href="https://thedatamap.org/contests/data/categories.csv" target="_blank">Categories of data holders of health data</a></p>
+              <p><sup>3</sup> <a href="https://thedatamap.org/contests/data/catsorgs.csv" target="_blank">Association list of categories from the categories file and organizations</a></p>
+              <p><sup>4</sup> <a href="https://thedatamap.org/contests/data/categories_info.xlsx" target="_blank">Longer description of each category</a></p>
+              <p><sup>5</sup> <a href="https://thedatamap.org/contests/data/prcbreaches2005-18.csv" target="_blank">List of breaches associated with different categories and organizations</a></p>
+              <p><sup>6</sup> <a href="https://thedatamap.org/contests/data/edges.xlsx" target="_blank">List of paths/directions of data transfer from one category to another</a></p>
+              <p><sup>7</sup> <a href="https://thedatamap.org/contests/data/20160614_android_apps.xlsx" target="_blank">110 popular Android apps and domains they were sharing user info with</a></p>
+              <p><sup>8</sup> <a href="https://thedatamap.org/contests/data/20160614_ios_apps.xlsx" target="_blank">110 popular iOS apps and domains the apps were sharing user info with</a></p>
+              <p><sup>9</sup> <a href="http://www.statemaster.com/index.php" target="_blank">StateMaster: U.S. States Statistical Database</a></p>
+              <p><sup>10</sup> <a href="https://drive.google.com/drive/u/1/folders/1oFKXLiIfDO1YmY-PSQtXYO6taLqpCgQd" target="_blank">Access Our Fully Scraped and Cleaned Data (used in this project)</a></p>
+              <br>
+              <h3>Image Sources</h3>
+              <p><sup>1</sup> <a href="https://openclipart.org/detail/247271/man-hello" target="_blank">Nathan</a></p>
+              <p><sup>2</sup> <a href="https://www.clipartmax.com/middle/m2i8K9i8A0H7G6m2_pictures-of-an-envelope-envelope-clipart-transparent-background/" target="_blank">Envelope</a></p>
+              <p><sup>3</sup> <a href="https://pinstake.com/money-bag-clip-art-free/717550153100995252/" target="_blank">Money Bag</a></p>
+              <p><sup>4</sup> <a href="https://openclipart.org/detail/262417/cartoon-android-smartphone" target="_blank">Phone</a></p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- libraries -->
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/scrollDots.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/queue.v1.min.js"></script>
+    <script src="js/topojson.min.js"></script>
+    <script src="js/d3-scale-chromatic.v1.min.js"></script>
+    <script src="js/colorbrewer.js"></script>
+    <script src="js/d3-legend.min.js"></script>
+    <script src="js/math.min.js"></script>
+
+
+    <!-- custom scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/vis-1.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/vis-2.js"></script>
+    <script src="js/vis_cartogram.js"></script>
+    <script src="js/vis-3.js"></script>
+    <script src="js/vis-4.js"></script>
+  </body>
+</html>

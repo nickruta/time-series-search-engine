@@ -1,0 +1,440 @@
+/* import fonts */
+@font-face {
+  font-family: RobotoLight;
+  src: url("../fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: GothamBold;
+  src: url("../fonts/Gotham-Bold.ttf");
+}
+
+@font-face {
+  font-family: GothamLight;
+  src: url("../fonts/Gotham-Light.ttf");
+}
+
+/* text */
+p {
+  margin: 0;
+}
+
+.text-margin-bottom {
+  margin-bottom: 25px;
+}
+
+.caption, .footnote {
+  font-family: "RobotoLight";
+  font-size: 14px;
+}
+
+.bold-caption {
+  font-family: "GothamBold";
+}
+
+.headline, .title {
+  font-family: "GothamBold";
+  font-size: 20px;
+  margin: 0;
+}
+
+.headline-margin {
+  margin-bottom: 10px;
+}
+
+.section-headline {
+  font-family: "GothamLight";
+  font-size: 16px;
+}
+
+.title {
+  font-family: "GothamBold";
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.small-title {
+  font-family: "GothamBold";
+  font-size: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#page-main-title {
+  color: #d9b66e;
+}
+
+/* main styles */
+#introduction {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3) ), url('../img/starry_night_bg_1.jpg');
+  /*background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3) ), url('../img/data.jpg');*/
+}
+
+#conclusion {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6) ), url('../img/data2.jpg');
+}
+
+#call-to-action {
+  margin-top: 100px;
+}
+
+#action-container {
+  margin-top: 10px;
+}
+
+.typedHeader {
+  display: inline-block;
+}
+
+.typed-cursor {
+  font-size: 30px;
+}
+
+img {
+  width: 50%;
+}
+
+.vertical-center {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+}
+
+#screencast-container {
+  margin-top: 0px;
+  display: block;
+}
+
+#screencast-title {
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  margin-bottom: 30px;
+}
+
+#inspiration-title {
+  margin-top: 25px;
+  display: block;
+}
+/* scroll dots */
+#fp-nav ul li .fp-tooltip {
+  color: #000000;
+}
+
+#action-container a {
+  color: rgb(253, 141, 60);
+}
+
+#author-list {
+  list-style-type: none;
+}
+
+
+/* icons and buttons */
+.icons-container {
+  margin: 30px 0;
+}
+
+.icon-container {
+  margin: 20px 0;
+}
+
+.icon-circle {
+  color: #007bff;
+}
+
+.button-container {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.button-link {
+  background-color: #ffffff;
+  border: 1px solid #007bff;
+  border-radius: 15px;
+  color: #007bff;
+  padding: 5px 10px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.button-link:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/*vis-1 annotation section styles */
+
+.out-node-text {
+  font-family: sans-serif;
+}
+
+#reset-vis-1 {
+  position: absolute;
+  left: 0px;
+  top: 620px;
+}
+#img-your-network {
+ width: 120% !important;
+}
+#vis-1-annotation-category, #vis-1-annotation-company {
+  background-color: rgb(227, 26, 28);
+  border-radius: 10px;
+  color: #ffffff;
+  margin-top: 130px;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+#vis-1-annotation-company {
+  margin-top: 20px;
+}
+
+.action-word {
+  color: #5cb85c;
+  font-weight: bold;
+}
+
+.instructions-node {
+  padding: 0px 5px;
+}
+
+.instructions-container {
+  background-color: #F3F3F1;
+  margin-top: 25px;
+  padding: 10px 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+#explore-1 .instructions-container {
+  margin-top: 50px;
+}
+
+.howto {
+  font-size: 20px;
+}
+
+/* vis-1 outer circle network styles */
+.swatch {
+  fill: rgb(251, 106, 74);
+  stroke: black;
+}
+
+#vis-1-info {
+  padding-left: 130px;
+}
+
+#vis-1-container {
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+#vis-1 {
+}
+
+svg {
+  font: 10px sans-serif;
+}
+
+path {
+  fill: none;
+  stroke: #999;
+  stroke-opacity: 0.6;
+  stroke-width: 1.5px;
+}
+
+.node circle {
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+#packChart {
+  position: absolute;
+  top: 205px;
+  left: 170px;
+}
+
+/* vis-1 inner circle packing styles */
+.node {
+  cursor: pointer;
+}
+
+.node:hover {
+  stroke: #000;
+}
+
+/* vis-1 legend styles */
+.vis-1-legend-container {
+  fill: #F3F3F1;
+}
+
+ /*vis 1 slider styles */
+ .carousel-caption {
+  color: black;
+ }
+
+ .carousel-item img {
+  padding-bottom: 150px;
+ }
+
+ .carousel-control-prev-icon {
+  margin-right: 60px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  margin-left: 60px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  margin-bottom: 140px;
+}
+
+#vis1-return-button {
+  margin-left:930px;
+  position: relative;
+  top: -25px;
+}
+
+/* Cartogram styles */
+#timeline .area-time{
+    fill: #b30000;
+    stroke: none;
+}
+
+#dropDown-category{
+  left: 100px;
+  font-size: 11px;
+  font-family: "GothamLight";
+}
+
+#timeline text{
+  font-size: 11px;
+}
+
+
+#vis2-header{
+  font-size: 20px;
+  font-family: "GothamBold";
+  margin-top: 75px;
+}
+
+#vis2-caption {
+  font-size: 11px;
+  font-family: "GothamLight";
+}
+
+
+
+/*TOOLTIP STYLES*/
+
+/*tooltip implementation and styling based on learning from: http://bl.ocks.org/Caged/6476579*/
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  font: 12px sans-serif;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.tooltip-text {
+  color: #ffdb6d;
+}
+
+.tooltip-margin {
+  display: block;
+  margin-top: 5px;
+}
+
+/* force layout averages */
+#vis-3-average-container {
+  margin: 25px auto;
+}
+
+.average-title {
+  color: #000000;
+  font-family: "GothamLight";
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.average {
+  display: inline-block;
+  font-family: "GothamBold";
+  font-size: 24px;
+}
+
+.average:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* force layout legend */
+#vis-3-legend-container {
+  margin-top: 25px;
+}
+
+.color-container {
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.color {
+  display: inline-block;
+  height: 20px;
+  margin-right: 5px;
+  width: 20px;
+}
+
+.color-text {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 0;
+  vertical-align: top;
+}
+
+.color-container:not(:last-child) .color-text {
+  margin-right: 20px;
+}
+
+/* graph */
+text {
+  font-family: "GothamLight";
+}
+
+.y-label {
+  text-anchor: middle;
+}
+
+.scrollable-dropdown {
+  max-height: 400px;
+  overflow: scroll!important;
+}
+
+.dropdown-container {
+  margin-top: 75px;
+}
+
+.dropdown-container2 {
+  margin: 20px 0 0 0;
+}
