@@ -24,7 +24,8 @@ $(document).ready(function(){
 });
 
 var myFullpage = new fullpage('#fullpage', {
-  anchors: ['home', 'section1', 'section2a', 'section3', 'section2b', 'section4', 'section2c', 'section5', 'section2d', 'section6', 'section7', 'section8', 'section9'],
+  // anchors: ['home', 'section1', 'section2a', 'section3', 'section2b', 'section4', 'section2c', 'section5', 'section2d', 'section6', 'section7', 'section8', 'section9'],
+  anchors: ['home', 'section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8'],
   menu: "#mainNav",
   navigation: true,
   navigationPosition: 'right',
