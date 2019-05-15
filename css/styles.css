@@ -460,7 +460,7 @@ text {
   top: 340px;
 }
 
-#pcoords-demo {
+#pcoords-demo, #search-demo {
   /*width: 100%;*/
   width: 600px;
   height: 338px;
