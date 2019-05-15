@@ -353,9 +353,48 @@
         </div>
       </div>
 
+      <div id="vis-analytics" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 vertical-center text-center">
+              <div>
+                <h1>Visual Analytics</h1>
+                <p class="lead" style='text-align: left'>
+                The "target" light curve (which the search was based on) is shown in <b style='color:#28a745'>green</b>. The left half of the screen contains a search results cluster at the top. The target is at the center, closer nodes are more similar based on the cross-correlation metric. Each node in the cluster has a bar to the right which expresses feature space distance to the target.
+
+                <br><br>
+                  <img id='search-demo' src="img/vis-demo.gif" style="width:100%">
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-5 vertical-center">
+              <div>
+                <!-- <h1>Visual Analytics</h1> -->
+                <p class="lead">
+                <!-- The "target" light curve (which the search was based on) is shown in <b style='color:#28a745'>green</b>. The left half of the screen contains a search results cluster at the top. The target is at the center, closer nodes are more similar based on the cross-correlation metric. Each node in the cluster has a bar to the right which expresses feature space distance to the target. -->
+
+                <br><br>Below the cluster, a one-to-many comparison chart shows the target's overall shape compared to the top 30 most similar in the database. To the right, a one-to-one comparison is plotted showing the target directly compared to the most recently hovered objectfrom the cluster.
+
+                <br><br>The right half of the screen is a table of the feature space for the 30 most similar observations in the database. The most recently hovered node on the cluster is highlighted in <b style='color:#007bff'>blue</b> on the <b>table</b> while the most recently hovered row on the table is highlighted in <b style='color:rgb(255, 140, 0)'>orange</b> on the <b>cluster</b>.
+
+                <br><br>You can click a node on the cluster or a row on the table to search with that observation as the new target.
+
+<!--                <ul id="vis-features-list">
+                <li>The observation the search is based on is   </li>
+                <li>Tea</li>
+                <li>Milk</li>
+              </ul>  -->
+                  <br><br><a class="btn btn-primary js-scroll-trigger" data-menuanchor="section8" href="http://3.84.17.81/">Try it live (click "Get Time Series")</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id="conclusion" class="section bg-primary text-white">
         <div class="container text-center">
-          <h1>Don't end up like Nathan.</h1>
+          <h1>Conclusion.</h1>
           <p class="lead">The data on health care privacy is much more shocking than we might think. Sensitive health data is spread through a complex network involving insurance companies, educational institutions, physicians, and more. As a result of this broad network, breaches are happening at an astonishing rate, increasing over time and across the United States. The individual stories of how these breaches are simultaneously unbelievable and strongly representative of the truth. Nathan's story is similar to 652 others in the same category of company. The problem is rooted so deeply it even extends to within reach of us (literally) through our smartphones, with health and medical apps relying on hundreds of online connections to transmit data.</p>
           <p id="call-to-action">
             <h2>Future Work</h2>
@@ -365,38 +404,6 @@
               </div>
             </div>
           </p>
-        </div>
-      </div>
-
-      <div id="explore-1" class="section">
-        <div class="container">
-          <div class="row">
-            <div class="vertical-center text-center">
-              <div>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-3">
-                        <div id="vis-1-annotation-category" class="caption"></div>
-                        <div id="vis-1-annotation-company" class="caption"></div>
-                        <div class="instructions-container small-title">
-                          <h2 class="howto">How to Use</h2>
-                            <p class="caption"><span class='action-word'>Hover</span> over a category node <svg class="instructions-node" height="15px" viewBox="-1 -2 34 34" xmlns="http://www.w3.org/2000/svg"><circle fill="#FEE5D9" stroke="black" stroke-width="1" cx="16" cy="16" r="16"/></svg> to see where it shares data to. <span class='action-word'><br><br>Click</span> a category node <svg class="instructions-node" height="15px" viewBox="0 -2 34 34" xmlns="http://www.w3.org/2000/svg"><circle fill="#FEE5D9" stroke="black" stroke-width="1" cx="16" cy="16" r="16"/></svg> to see that category's companies details.</p>
-
-                            <p class="caption"><span class='action-word'>Hover</span> over any company <svg class="instructions-node" height="20px" viewBox="-1 -2 34 34" xmlns="http://www.w3.org/2000/svg"><circle fill="rgb(49, 130, 189)" stroke="rgb(49, 130, 189)" stroke-width="1" cx="16" cy="16" r="16"/></svg> to see details. <span class='action-word'><br>Click</span> any company <svg class="instructions-node" height="20px" viewBox="-1 -2 34 34" xmlns="http://www.w3.org/2000/svg"><circle fill="rgb(49, 130, 189)" stroke="rgb(49, 130, 189)" stroke-width="1" cx="16" cy="16" r="16"/></svg> to show the categories network again.</p>
-                        </div>
-                    </div>
-                    <div class="col-9">
-                      <div id="vis-1-group">
-                        <button id="reset-vis-1" type="button" class="btn btn-sm btn-warning">Hide Companies Cluster</button>
-                        <svg id="vis-1-container"></svg>
-                      </div>
-                    </div>
-                  </div>
-                  <a id="vis1-return-button" class="btn btn-primary js-scroll-trigger" data-menuanchor="section3" href="#section3">Return to Story</a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 

@@ -465,3 +465,7 @@ text {
   width: 600px;
   height: 338px;
 }
+
+#vis-features-list {
+  margin-top: 20px;
+}
