@@ -459,3 +459,9 @@ text {
   left: 380px;
   top: 340px;
 }
+
+#pcoords-demo {
+  /*width: 100%;*/
+  width: 600px;
+  height: 338px;
+}
