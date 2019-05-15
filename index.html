@@ -69,7 +69,7 @@
       <div id="introduction" class="section bg-primary text-white">
         <div class="container text-center">
           <h1 id="page-main-title">Visual Analytics for Astronomy Time Series Analysis</h1>
-          <p class="lead">Nick Ruta</p>
+          <p class="lead">Nicholas Ruta</p>
           <br>
           <br>
           <h3 class="typedHeader"></h3>
@@ -233,7 +233,7 @@
                     <div id="map-container"></div>
                   </div> -->
                 <h3>Kernelized Cross-Correlation Distance Metric</h3>
-                <p class="lead">Computing the cross-correlation this way is efficiently computable and scalable. Fortunately legislation is being passed at a state level that forces companies to disclose these breaches to the public. California has the strictest laws, but today all 50 </p>
+                <p class="lead" style='text-align: left'>We use a kernelized cross-correlation distance metric to compare light curves (astronomy time series) based on their morphology. We pre-process the light curves by folding them based on their period and using interpolation and standardizing to produce evently spaced observations on a similar scale. Finally, we compute and maximize the distance between two light curves with a <a href='https://link.springer.com/chapter/10.1007/978-3-642-04174-7_32'>kernelized cross-correlation score using phase shifting.</a></p>
                   <img id='process_steps_png' src="img/process_steps.png">
                   <ol id='steps-list' type="1">
                     <li>Raw Data</li>
@@ -242,11 +242,7 @@
                     <li>Standardize</li>
                     <li>Compute Cross-Correlation</li>
                     <li>Compute Kernelized Correlation as a Disatnce Measure</li>
-                  </ol> 
-
-                </div>
-                <div class="row">
-                  <div id="timeline"></div>
+                  </ol>
                 </div>
               </div>
             </div>
@@ -254,15 +250,15 @@
             <div class="col-md-6 vertical-center">
               <div>
                 <h2>Feature-based Distance Metric </h2>
-                <p class="lead">Using the feature space of our time-series data, we can compute the weighted arithmetic mean as a distance metric. This allows us to determine how similar observations are based on properties other than the time series shape.</p>
+                <p class="lead">Using the <a href='http://isadoranun.github.io/tsfeat/FeaturesDocumentation.html'>feature space of our time-series data</a>, we can compute the weighted arithmetic mean as a distance metric. The feature space provides a scalable way to explore large time series databases. It allows us to enhance our similarity searches and identify interesting observations using a potentially lower-dimensional space. We can select weighted features based on a specific profile to encourage the search results.</p>
                   <img id='weighted_mean_png' src="img/weighted-mean.png">
                   <ol id='steps-list' type="1">
                     <li>Calculate the weighted arithmetic mean as the</li> 
                     <li>sum of the product of </li> 
-                    <li>the individual assigned weights (w)</li> 
-                    <li>and corresponding features (x)</li>
-                    <li>for each time series feature (n),</li>
-                    <li>divided by the sum of all the weights (w)</li>
+                    <li>the individual assigned weights (<i>w</i>)</li> 
+                    <li>and corresponding features (<i>x</i>)</li>
+                    <li>for each time series feature (<i>n</i>),</li>
+                    <li>divided by the sum of all the weights (<i>w</i>)</li>
                   </ol> 
               </div>
             </div>
@@ -448,10 +444,10 @@
           <div class="row">
             <div class="col-md-6">
               <h1 class="footer-title">Project Info</h1>
-              <h3>Author</h3>
+              <h3>Author List</h3>
               <ul>
                 <li id='author-list'>
-                  <a href="http://nickruta.com/" target="_blank">Nick Ruta</a>
+                  <a href="http://nickruta.com/" target="_blank">Nicholas Ruta</a>
                 </li>
               </ul>
               <div id='screencast-container' class="row">
@@ -471,6 +467,9 @@
               <br>
               <h3>Publications</h3>
               <p><sup>1</sup> <a href="https://link.springer.com/chapter/10.1007/978-3-642-04174-7_32" target="_blank">Kernels for Periodic Time Series Arising in Astronomy</a></p>
+              <p><sup>2</sup> <a href="https://arxiv.org/abs/1506.00010" target="_blank">FATS: Feature Analysis for Time Series</a></p>
+
+
             </div>
         </div>
       </div>
