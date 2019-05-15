@@ -54,7 +54,7 @@
               <a class="nav-link js-scroll-trigger" data-menuanchor="section7" href="#section7">Visual Analytics</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" data-menuanchor="section8" href="#section8">Future Work</a>
+              <a class="nav-link js-scroll-trigger" data-menuanchor="section8" href="#section8">Conclusion</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" data-menuanchor="section9" href="#section9">References</a>
@@ -79,7 +79,7 @@
       <div id="motivation" class="section">
         <div class="container text-center">
           <h1 data-aos="fade-in">Why does this matter?</h1>
-          <p class="lead">We all know data gets passed around somehow. By some people. In some way. Surprisingly, though, breaches in health data are much more common than we might think, and the extent of impact is shockingly broad.</p>
+          <p class="lead">Astronomy surveys contain millions of objects. Significant time requirement to do manual classification. Many stars remain unclassified. Stars are represented as a time series. In order to make new discoveries, we will need scalable <a href='https://en.wikipedia.org/wiki/Astroinformatics'> Astroinformatics</a> systems.</p>
 
           <!-- font awesome icons -->
           <!-- circle background adapted from https://blackrockdigital.github.io/startbootstrap-agency/ -->
@@ -147,7 +147,7 @@
           <div class="row">
             <div class="col-md-6 vertical-center text-center">
               <div>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false" data-interval="4000">
                   <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -209,12 +209,12 @@
       <div id="vis-2" class="section">
         <div class="container">
           <div class="row">
-            <div class="col-md-8 vertical-center text-center" id="map-dashboard">
+            <div class="col-md-6 vertical-center text-center" id="map-dashboard">
               <div>
                 <div class="row">
-                  <div class="col-md-4 text-left">
+                  <!-- <div class="col-md-4 text-left">
                     <h2 id="vis2-header">Breaches Reported Across the US</h2>
-                    <!-- Bootstrap dropdown -->
+                   
                     <div class="dropdown-container2">
                       <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -228,10 +228,22 @@
                       <h2 class="howto">How to Use</h2>
                         <p class="caption"><span class='action-word'>Hover</span> over boxes to see state-specific data. <span class='action-word'>Click</span> and <span class='action-word'>drag</span> your cursor over the timeline below to explore the distributions of breaches from 2005 to 2018. <span class='action-word'>Filter</span> by company category using the dropdown above.</p>
                     </div>
-                  </div>
-                  <div class="col-md-7 vertical-center" id = "map-size">
+                  </div> -->
+<!--                   <div class="col-md-7 vertical-center" id = "map-size">
                     <div id="map-container"></div>
-                  </div>
+                  </div> -->
+                <h3>Kernelized Cross-Correlation Distance Metric</h3>
+                <p class="lead">Computing the cross-correlation this way is efficiently computable and scalable. Fortunately legislation is being passed at a state level that forces companies to disclose these breaches to the public. California has the strictest laws, but today all 50 </p>
+                  <img id='process_steps_png' src="img/process_steps.png">
+                  <ol id='steps-list' type="1">
+                    <li>Raw Data</li>
+                    <li>Fold the light curve</li>
+                    <li>Interpolate</li>
+                    <li>Standardize</li>
+                    <li>Compute Cross-Correlation</li>
+                    <li>Compute Kernelized Correlation as a Disatnce Measure</li>
+                  </ol> 
+
                 </div>
                 <div class="row">
                   <div id="timeline"></div>
@@ -239,10 +251,19 @@
               </div>
             </div>
 
-            <div class="col-md-4 vertical-center">
+            <div class="col-md-6 vertical-center">
               <div>
-                <h1>This is reality.</h1>
-                <p class="lead">While Nathan's misfortune seems like an odd story, this breach actually happened in April 2011. More than <b>78 million</b> individuals were affected. Thousands of breaches just like this one occur throughout the United States. <br><br> Fortunately legislation is being passed at a state level that forces companies to disclose these breaches to the public. California has the strictest laws, but today all 50 states have passed legislation forcing companies to report breaches in their data causing more and more of these breaches to be exposed.</p>
+                <h2>Feature-based Distance Metric </h2>
+                <p class="lead">Using the feature space of our time-series data, we can compute the weighted arithmetic mean as a distance metric. This allows us to determine how similar observations are based on properties other than the time series shape.</p>
+                  <img id='weighted_mean_png' src="img/weighted-mean.png">
+                  <ol id='steps-list' type="1">
+                    <li>Calculate the weighted arithmetic mean as the</li> 
+                    <li>sum of the product of </li> 
+                    <li>the individual assigned weights (w)</li> 
+                    <li>and corresponding features (x)</li>
+                    <li>for each time series feature (n),</li>
+                    <li>divided by the sum of all the weights (w)</li>
+                  </ol> 
               </div>
             </div>
           </div>
@@ -380,7 +401,7 @@
           <h1>Don't end up like Nathan.</h1>
           <p class="lead">The data on health care privacy is much more shocking than we might think. Sensitive health data is spread through a complex network involving insurance companies, educational institutions, physicians, and more. As a result of this broad network, breaches are happening at an astonishing rate, increasing over time and across the United States. The individual stories of how these breaches are simultaneously unbelievable and strongly representative of the truth. Nathan's story is similar to 652 others in the same category of company. The problem is rooted so deeply it even extends to within reach of us (literally) through our smartphones, with health and medical apps relying on hundreds of online connections to transmit data.</p>
           <p id="call-to-action">
-            <h2>What can you do about it?</h2>
+            <h2>Future Work</h2>
             <div id="action-container" class="row">
                 <div class="col-sm-12">
                   <p><a href="https://www.healthit.gov/form/healthit-feedback-form" target="_blank">healthIT.gov</a> can help you file a complaint if you believe your health information privacy has been violated. You can <a href="https://www.hipaajournal.com/category/healthcare-data-privacy/" target="_blank">keep up to date on healthcare data privacy issues.</a> Also, you can update privacy settings on apps provided by companies such as <a href="https://www.facebook.com/help/325807937506242" target="_blank">Facebook</a> and <a href="https://policies.google.com/privacy?hl=en" target="_blank">Google</a>.</p>
@@ -438,7 +459,8 @@
                 <iframe width="350" height="200" src="https://www.youtube.com/embed/AwXnXk_7ynE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
               </div>
               <h3 id='inspiration-title'>Inspiration & Research</h3>
-              <p><sup>1</sup> <a href="http://www.verizonenterprise.com/resouces/executivesummary/es_2011-data-breach-investigations-report_en_xg.pdf" target="_blank">2011 data breach report</a></p>
+              <p><sup>1</sup><a href="https://www.lsst.org/about" target="_blank"> LSST Project Mission Statement</a></p>
+              <p><sup>2</sup><a href="https://en.wikipedia.org/wiki/Metric_space" target="_blank"> Metric space</a></p>
 
             </div>
             <div class="col-md-6">
@@ -447,6 +469,8 @@
               <p><sup>1</sup> <a href="https://vvvsurvey.org/" target="_blank">The VVV Survey</a></p>
               <p><sup>2</sup> <a href="http://nesssi.cacr.caltech.edu/DataRelease/" target="_blank">Catalina Sky Survey (CSDR2)</a></p>
               <br>
+              <h3>Publications</h3>
+              <p><sup>1</sup> <a href="https://link.springer.com/chapter/10.1007/978-3-642-04174-7_32" target="_blank">Kernels for Periodic Time Series Arising in Astronomy</a></p>
             </div>
         </div>
       </div>
